@@ -42,7 +42,7 @@ export default function Adoption({ photos }){
     )
 }
 
-export async function getStaticProps(context){
+export async function getServerSideProps(context){
     const res = await fetch('https://jsonplaceholder.typicode.com/photos');
     const data = await res.json();
     const photos = data.slice(0,24);
